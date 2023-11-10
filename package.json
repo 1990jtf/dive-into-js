@@ -1,0 +1,12 @@
+{
+  "name": "dive-in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node /src/fibnac.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
