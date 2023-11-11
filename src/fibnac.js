@@ -1,7 +1,13 @@
 /**
+ * Javascript 单线程问题
+ * 如果执行任何CPU密集型的计算，它会阻塞整个事件循环，这反过来优惠阻塞你的整个应用程序
+ * 在服务器环境中就很糟糕。
+ * 
  * 本次参考资料
  * 链接：https://www.bilibili.com/video/BV1JN41147ob
+ * 
  */
+
 
 function fibonacci(n) {
   return n < 1 ? 0 : n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);

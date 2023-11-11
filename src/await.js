@@ -1,5 +1,5 @@
 const timeOut = () => {
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       const res = "jiangtengfei";
       console.log(res);
@@ -8,15 +8,23 @@ const timeOut = () => {
   });
 };
 
-// 如果timeOut不写await，会先执行下面的代码
+/**
+ * 方法一：不使用await,会先执行下面的代码
+ * 结果：start >> end >> jiangtengfei
+ */
 // console.log("start");
 // timeOut();
 // console.log("end");
 
-// 如果写await，就是表示需要等待，异步代码同步执行
+/**
+ * 方法二：使用await，就是表示需要等待，异步代码同步执行
+ * 结果：start >> jiangtengfei >> end
+ */
 const main = async () => {
   console.log("start");
   await timeOut();
+  // const res = await timeOut();
+  // console.log(res);
   console.log("end");
 };
 
